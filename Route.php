@@ -44,7 +44,7 @@ class Route {
 	}
 
 	public function _init( \WP_Query $query ) {
-		if ( $query->is_main_query() || ! $q = $this->_parse_request( $query ) ) {
+		if ( $query->is_main_query() && $q = $this->_parse_request( $query ) ) {
 			do_action( __CLASS__ . '::action', $this, $q );
 		}
 	}
