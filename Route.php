@@ -54,7 +54,7 @@ class Route {
 	 */
 	private function _parse_admin_request() {
 		global $pagenow;
-		$q = [ 'page' => $pagenow ];
+		$q = [ 'pagenow' => $pagenow ];
 		switch ( $pagenow ) {
 			case 'edit.php' :
 			case 'post-new.php' :
